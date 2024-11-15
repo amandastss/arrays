@@ -1,0 +1,44 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: LOJA DE VEÍCULOS
+    Crie os seguintes arrays:
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    
+    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    Apresente a lista final de cada tipo de veículo.
+    */
+
+    //ENTRADA
+    const veiculo1 = prompt(`Informe um veiculo para ser adicionado à lista (identifique se é SUV, sedan ou Hatch)`);
+    const veiculo2 = prompt(`Informe outro veiculo para ser adicionado à lista (identifique se é SUV, sedan ou Hatch):`);
+    const veiculo3 = prompt(`Informe outro veiculo para ser adicionado à lista (identifique se é SUV, sedan ou Hatch):`);
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    
+    //PROCESSAMENTO
+    veiculo1.includes("SUV") ? carrosSUV.push(veiculo1) : //includes verifica se uma string contém outra string
+    veiculo1.includes("sedan") ? carrosSedan.push(veiculo1) :
+    veiculo1.includes("Hatch") ? carrosHatch.push(veiculo1) :
+    null;
+
+    veiculo2.includes("SUV") ? carrosSUV.push(veiculo2) :
+    veiculo2.includes("sedan") ? carrosSedan.push(veiculo2) :
+    veiculo2.includes("Hatch")  ? carrosHatch.push(veiculo2) :
+    null;
+
+    veiculo3.includes("SUV")  ?  carrosSUV.push(veiculo3) :
+    veiculo3.includes("sedan") ? carrosSedan.push(veiculo3) :
+    veiculo3.includes("Hatch") ? carrosHatch.push(veiculo3) :
+    null;
+
+    //SAÍDA
+    alert(`Lista atual de SUVs: ${carrosSUV.join(", ")}`);
+    alert(`Lista atual de sedans: ${carrosSedan.join(", ")}`);
+    alert(`Lista atual de Hatchs: ${carrosHatch.join(", ")}`);
+</script>
